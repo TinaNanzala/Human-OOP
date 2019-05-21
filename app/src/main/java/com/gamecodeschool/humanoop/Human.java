@@ -4,8 +4,8 @@ import android.util.Log;
 
 public class Human {
     private String name;
-    public int age;
-    public int weight;
+    private int age;
+    private int weight;
 
     public Human(String name, int age, int weight) {
         this.name = name;
@@ -45,14 +45,17 @@ public class Human {
     }
 
      public void sleep(int hours){
-        Log.d("Human","I am sleeping for x hours ");
+        Log.d("Human","I am sleeping for"+ hours+"hours ");
      }
      public void speak(String speech){
-        Log.d("Human","She is speaking");
+        Log.d("Human",speech);
      }
-     public int birthday(){
-        age=age+1;
-        return age;
+     public void birthday(){
+       int age=getAge();
+       age=age+1;
+       setAge(age);
+
+
      }
 
 }

@@ -1,5 +1,7 @@
 package com.gamecodeschool.humanoop;
 
+import android.util.Log;
+
 public class Anna extends Human {
     private int height;
     public Anna(String name, int age, int weight) {
@@ -11,6 +13,14 @@ public class Anna extends Human {
         this.height = height;
     }
 
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
     @Override
     public int getWeight() {
         return height;
@@ -19,14 +29,16 @@ public class Anna extends Human {
     @Override
     public void eat() {
         super.eat();
-        weight=weight+2;
-
+    int annaWeight=getWeight();
+    annaWeight=annaWeight+2;
+    setWeight(annaWeight);
 
     }
 
     @Override
-    public int birthday() {
-        age=age+1;
-      return age;
+    public void birthday() {
+    int newAge=getAge();
+    newAge=newAge+4;
+    setAge(newAge);
     }
 }
